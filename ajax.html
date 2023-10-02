@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<style>
+  body{
+     background-color:rgb(225, 227, 228);
+     width:20%;
+     height:200px;
+     margin-left:10%;
+     margin-right:10%;
+     border:3px solid rgb(46, 168, 9);
+ 
+ }
+</style>
+  
+<body>
+  <button id="btnFetch">Peticion AJAX</button>
+  <div id="result"></div>
+
+  <script>
+    
+    function makeAjaxRequest() {
+      fetch("https://api.example.com/data")
+        .then(response => response.json()) 
+        .then(data => {
+          document.getElementById("result").innerHTML = "Respuesta: " + JSON.stringify(data);
+        })
+        .catch(error  => {
+          document.getElementById("result").innerHTML = "soy Fabio: " + error.message;
+        });
+    }
+    
+    
+    document.getElementById("btnFetch").addEventListener("click", makeAjaxRequest);
+  </script>
+</body>
+</html>

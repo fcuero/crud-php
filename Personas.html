@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<html>
+    <body>
+        <script>    
+        const personas = [
+        { id: 1, nombre: "Fabio", edad: 68, ciudad: "Cali" },
+        { id: 2, nombre: "Cuero", edad: 80, ciudad: "Bogota" },
+        { id: 3, nombre: "Montano", edad: 33, ciudad: "Palmira" },
+        { id: 4, nombre: "Luisa", edad: 28, ciudad: "Medellin" }
+        ];
+
+        const mayoresDeTreinta = personas.filter(persona => persona.edad > 30);
+
+        mayoresDeTreinta.forEach(persona => {
+        alert(`Nombre: ${persona.nombre}\nEdad: ${persona.edad}\nCiudad: ${persona.ciudad}`);
+        });
+    </script>
+    </body>
+</html>

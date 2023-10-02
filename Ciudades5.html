@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+ 
+ <style>
+  body{
+     background-color:rgb(225, 227, 228);
+     width:20%;
+     height:200px;
+     margin-left:10%;
+     margin-right:10%;
+     border:3px solid rgb(46, 168, 9);
+ 
+ }
+</style>
+
+<body>
+  <br>
+  
+  <script>
+   
+		   
+  const cities = ['', 'Bogota', 'Cali', 'Medellin', 'Barranquilla', 'Cartagena'];
+  const select = document.createElement('select');
+  const defaultOption = document.createElement('option');
+  defaultOption.value = '';
+  select.appendChild(defaultOption);
+  for (let i = 1; i < cities.length; i++) {
+    const option = document.createElement('option');
+    option.value = cities[i];
+    option.text = cities[i];
+    select.appendChild(option);
+  }
+  document.body.appendChild(select);
+      
+  </script>
+</body>
+</html>
